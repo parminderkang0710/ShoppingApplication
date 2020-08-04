@@ -94,7 +94,7 @@
 
 
                     <Button
-                        android:id="@+id/button"
+                        android:id="@+id/buttontopping"
                         android:layout_width="wrap_content"
                         android:layout_height="46dp"
 
@@ -105,7 +105,7 @@
 
                         android:layout_weight="1"
                         android:background="@drawable/bg"
-                        android:text="Select" />
+                        android:text="Select And Order More" />
 
                 </RelativeLayout>
 
