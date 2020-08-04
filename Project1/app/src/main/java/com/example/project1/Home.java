@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class Home extends AppCompatActivity {
-    ImageView pizza,logout,wings;
+    ImageView pizza,logout,wings, imageView1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,16 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intToHome = new Intent(Home.this, Wings.class);
                 startActivity(intToHome);
+
             }
         });
+        imageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intoHome= new Intent(Home.this,MainActivity5.class);
+                startActivity(intoHome);
+            }
+        });
+
     }
 }
