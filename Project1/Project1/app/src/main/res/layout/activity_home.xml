@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main2Activity">
+    tools:context=".Home">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:text="PIZZA SIZE"
+                    android:text="HOME"
                     android:textColor="#ffffff"
                     android:textSize="30dp" />
             </RelativeLayout>
@@ -72,7 +72,7 @@
                                     android:layout_width="152dp"
                                     android:layout_height="172dp"
                                     android:layout_centerInParent="true"
-                                    app:srcCompat="@drawable/small" />
+                                    app:srcCompat="@drawable/pizzaicon" />
                             </RelativeLayout>
                         </LinearLayout>
 
@@ -91,7 +91,7 @@
                                     android:layout_width="152dp"
                                     android:layout_height="172dp"
                                     android:layout_centerInParent="true"
-                                    app:srcCompat="@drawable/medium" />
+                                    app:srcCompat="@drawable/wings" />
                             </RelativeLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -123,7 +123,7 @@
                                     android:layout_width="152dp"
                                     android:layout_height="172dp"
                                     android:layout_centerInParent="true"
-                                    app:srcCompat="@drawable/large" />
+                                    app:srcCompat="@drawable/fries" />
                             </RelativeLayout>
                         </LinearLayout>
 
@@ -142,7 +142,7 @@
                                     android:layout_width="152dp"
                                     android:layout_height="172dp"
                                     android:layout_centerInParent="true"
-                                    app:srcCompat="@drawable/xtralarge" />
+                                    app:srcCompat="@drawable/coca" />
                             </RelativeLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -150,11 +150,12 @@
             </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:background="#fff">
+            android:background="#ff0000">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -213,8 +214,6 @@
                         android:layout_centerVertical="true"/>
                 </RelativeLayout>
             </LinearLayout>
-
-
         </LinearLayout>
 
     </LinearLayout>
