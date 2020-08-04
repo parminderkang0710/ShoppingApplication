@@ -21,7 +21,8 @@ public class fries extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                Intent intToHome = new Intent(fries.this, Home.class);
+                startActivity(intToHome);
             }
         });
     }

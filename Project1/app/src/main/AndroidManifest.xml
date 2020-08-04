@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fries"></activity>
+        <activity android:name=".drink"></activity>
+        <activity android:name=".fries" />
         <activity android:name=".Wings" />
         <activity android:name=".Toppings" />
         <activity android:name=".Main2Activity" />
