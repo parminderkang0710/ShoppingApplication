@@ -45,7 +45,7 @@ public class Home extends AppCompatActivity {
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intoHome= new Intent(Home.this,MainActivity5.class);
+                Intent intoHome= new Intent(Home.this,Checkout.class);
                 startActivity(intoHome);
             }
         });
