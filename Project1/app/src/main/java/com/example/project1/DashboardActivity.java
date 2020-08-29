@@ -2,12 +2,14 @@ package com.example.project1;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -36,6 +38,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         db.collection("Users").document(userId)
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
 
@@ -71,7 +74,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 startActivity(orders);
                 break;
             case R.id.btnProfile:
-                Intent profile = new Intent(DashboardActivity.this, ProfileActivity.class);
+                Intent profile = new Intent(DashboardActivity.this, profile.class);
                 startActivity(profile);
                 break;
             case R.id.btnLogout:
