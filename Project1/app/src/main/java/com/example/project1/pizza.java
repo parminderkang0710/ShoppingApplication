@@ -20,10 +20,17 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.List;
 
 
 public class pizza extends AppCompatActivity {
 
+    private List<Pizza> dataList;
+    PizzaAdapter adapter;
+    RecyclerView recyclerView;
+    AppCompatEditText etSearch;
+    FirebaseFirestore mFirebaseFirestore;
+    String TAG = "PizzaActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
