@@ -13,7 +13,6 @@
         <activity android:name=".item_order" />
         <activity android:name=".signup" />
         <activity android:name=".profile" />
-        <activity android:name=".pizza" />
         <activity android:name=".orders" />
         <activity android:name=".order" />
         <activity android:name=".dashboard" />
