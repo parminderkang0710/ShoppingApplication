@@ -1,5 +1,9 @@
 package com.example.project1;
 
+/**
+ * Dilpreet Singh
+ */
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,6 +17,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+/**
+ * files imported for firestore
+ */
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -23,7 +30,9 @@ import java.util.Map;
 
 import me.himanshusoni.quantityview.QuantityView;
 
-
+/**
+ * attributes
+ */
 public class OrderActivity extends AppCompatActivity implements QuantityView.OnQuantityChangeListener {
 
     ImageView ivPizza;
@@ -31,8 +40,16 @@ public class OrderActivity extends AppCompatActivity implements QuantityView.OnQ
     String size, name, userId;
     int price, qty=1;
     Button btnOrder;
+    /**
+     * sharedpreferences to retrive and store key pair
+     * of files
+     */
     SharedPreferences sharedPreferences;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,10 +67,19 @@ public class OrderActivity extends AppCompatActivity implements QuantityView.OnQ
         } else if (TextUtils.equals(size, "extralarge")) {
             ivPizza.setImageResource(R.drawable.xtralarge);
         }
-
+/**
+ * value for attribute
+ * getintent method to handle returning data from an activity
+ */
         tvName = findViewById(R.id.tvName);
         name = getIntent().getStringExtra("name");
         tvName.setText(name);
+
+        /**
+         * value for attribute
+         * getintent method to handle returning data from an activity
+         * .set to set the text to be displayed
+         */
 
         tvPrice = findViewById(R.id.tvPrice);
         tvTotalPrice = findViewById(R.id.tvTotalPrice);

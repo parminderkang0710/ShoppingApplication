@@ -1,4 +1,8 @@
 package com.example.project1;
+/**
+ * Created by Arshpreet KAur Bhullar
+ */
+
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -17,7 +21,11 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * attributes for list view such as
+ * adapter and recycle view
+ * and firebase
+ */
 public class MyOrdersActivity extends AppCompatActivity {
 
     private List<Order> dataList;
@@ -28,6 +36,10 @@ public class MyOrdersActivity extends AppCompatActivity {
     String userId;
     SharedPreferences sharedPreferences;
 
+    /**
+     * values set for attributes
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +55,7 @@ public class MyOrdersActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(adapter);
         getListItems();
-
+        // get items from list
     }
 
 

@@ -1,5 +1,13 @@
 package com.example.project1;
 
+/**
+ * created by Dilpreet Singh
+ */
+
+/**
+ * imported files for firebase authentication
+ */
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -20,13 +28,25 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.text.MessageFormat;
 import java.util.Objects;
 
+/**
+ * attributes for user ,name, buttons
+ */
+
 
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
     String userId;
+    /**
+     * sharedpreferences to retrive and store key pair
+     * of files
+     */
     SharedPreferences sharedPreferences;
     TextView tvName;
     Button btnNewOrder, btnOrders, btnProfile, btnLogout;
 
+    /**
+     * declared id's to store data in attributes
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,11 +68,17 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                     }
                 });
 
+        /**
+         * buttons name declared to find views
+         */
         btnNewOrder = findViewById(R.id.btnNewOrder);
         btnOrders = findViewById(R.id.btnOrders);
         btnProfile = findViewById(R.id.btnProfile);
         btnLogout = findViewById(R.id.btnLogout);
 
+        /**
+         * method declared for buttons to be clicked
+         */
         btnNewOrder.setOnClickListener(this);
         btnOrders.setOnClickListener(this);
         btnProfile.setOnClickListener(this);
@@ -62,7 +88,10 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-
+/**
+ * switch cases being used to test values
+ * as intents given to move on furter classes by click on particular button
+ */
         switch (v.getId()) {
 
             case R.id.btnNewOrder:

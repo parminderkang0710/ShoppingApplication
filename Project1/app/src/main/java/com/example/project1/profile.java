@@ -1,4 +1,7 @@
 package com.example.project1;
+/**
+ * created By sandeep
+ */
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +19,9 @@ import java.util.Objects;
 
 import android.os.Bundle;
 
+/**
+ * attributes
+ */
 public class profile extends AppCompatActivity {
     private AppCompatEditText etName, etEmail, etMobile, etAddress, etCity;
     SharedPreferences sharedPreferences;
@@ -29,13 +35,17 @@ public class profile extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("pref", MODE_PRIVATE);
         userId = sharedPreferences.getString("UserId", "0");
-
+/**
+ * values declared for attributes
+ */
         etName = findViewById(R.id.etName);
         etEmail = findViewById(R.id.etEmail);
         etAddress = findViewById(R.id.etAddress);
         etCity = findViewById(R.id.etCity);
         etMobile = findViewById(R.id.etMobile);
-
+/**
+ * to collect user data on firestore
+ */
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Users").document(userId)
                 .get()
@@ -43,7 +53,9 @@ public class profile extends AppCompatActivity {
                     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
-
+/**
+ * for to user to set their on credentials
+ */
                         etName.setText(Objects.requireNonNull(Objects.requireNonNull(documentSnapshot.getData()).get("name")).toString());
                         etEmail.setText(Objects.requireNonNull(Objects.requireNonNull(documentSnapshot.getData()).get("email")).toString());
                         etAddress.setText(Objects.requireNonNull(Objects.requireNonNull(documentSnapshot.getData()).get("address")).toString());

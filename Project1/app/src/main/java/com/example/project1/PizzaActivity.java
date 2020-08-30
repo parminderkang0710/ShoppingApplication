@@ -1,4 +1,10 @@
 package com.example.project1;
+/**
+ * Created by Gurbir Singh
+ */
+/**
+ * imported Files
+ */
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -28,7 +34,9 @@ import java.util.List;
 
 
 public class PizzaActivity extends AppCompatActivity {
-
+    /**
+     * attributes
+     */
     private List<Pizza> dataList;
     PizzaAdapter adapter;
     RecyclerView recyclerView;
@@ -36,6 +44,10 @@ public class PizzaActivity extends AppCompatActivity {
     FirebaseFirestore mFirebaseFirestore;
     String TAG = "PizzaActivity";
 
+    /**
+     * to get firebase values
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +58,11 @@ public class PizzaActivity extends AppCompatActivity {
         // setup recycler view
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
+        /**
+         * adapter to fill data in UI component
+         * as well as to hold and show the data
+         * as list view or gridview
+         */
         adapter = new PizzaAdapter(this, dataList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(adapter);

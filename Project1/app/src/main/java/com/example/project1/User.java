@@ -1,12 +1,26 @@
 package com.example.project1;
 
+/**
+ * created by Gurbir Singh
+ */
 public class User {
-
+    /**
+     * attributes
+     */
     String id, name, email, address, mobile, city;
 
     public User() {
     }
 
+    /**
+     *
+     * @param id
+     * @param name
+     * @param email
+     * @param address
+     * @param mobile
+     * @param city
+     */
     public User(String id, String name, String email, String address, String mobile, String city) {
         this.id = id;
         this.name = name;
@@ -16,6 +30,11 @@ public class User {
         this.city = city;
     }
 
+    /**
+     * getter and stter
+     * to set and get return values for attributes
+     * @return
+     */
     public String getId() {
         return id;
     }

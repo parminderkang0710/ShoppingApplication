@@ -1,7 +1,13 @@
 package com.example.project1;
 
+/**
+ * created by Gurbir Singh
+ */
 
 public class Order {
+    /**
+     * attributes
+     */
 
     String id, pizza, size, total, userid;
     int price, qty;
@@ -9,6 +15,16 @@ public class Order {
     public Order() {
     }
 
+    /**
+     * values for attibutes
+     * @param id
+     * @param pizza
+     * @param size
+     * @param total
+     * @param userid
+     * @param price
+     * @param qty
+     */
     public Order(String id, String pizza, String size, String total, String userid, int price, int qty) {
         this.id = id;
         this.pizza = pizza;
@@ -19,6 +35,11 @@ public class Order {
         this.qty = qty;
     }
 
+    /**
+     * getter and setter
+     * to set and get the values of declared attributes
+     * @return
+     */
     public String getId() {
         return id;
     }

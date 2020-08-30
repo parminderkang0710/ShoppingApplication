@@ -1,5 +1,9 @@
 package com.example.project1;
 
+/**
+ * created by arshpreet kaur
+ */
+
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,7 +36,9 @@ import java.util.Map;
 import java.util.Objects;
 
 
-
+/**
+ * attributes
+ */
 
 
 public class signup extends AppCompatActivity {
@@ -43,7 +49,10 @@ public class signup extends AppCompatActivity {
     private FirebaseAuth mAuth;
     String TAG = "SignUpActivity";
 
-
+    /**
+     * values declared for attributes
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +74,9 @@ public class signup extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
+            /**
+             * to get user details
+             */
             public void onClick(View v) {
                 name = Objects.requireNonNull(etName.getText()).toString();
                 email = Objects.requireNonNull(etEmail.getText()).toString();
@@ -74,7 +86,9 @@ public class signup extends AppCompatActivity {
                 password = Objects.requireNonNull(etPassword.getText()).toString();
                 confirm = Objects.requireNonNull(etConfirm.getText()).toString();
 
-
+/**
+ * methods to set data and messages to shown while error occured
+ */
                 if (TextUtils.isEmpty(name)) {
                     etName.setError("This field is empty!");
                     return;
@@ -98,6 +112,10 @@ public class signup extends AppCompatActivity {
                     etConfirm.setError("Password does not match !");
                     return;
                 }
+                /**
+                 * progressbar an user interface
+                 * that show the progress of an operation
+                 */
                 progressBar.setVisibility(View.VISIBLE);
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(signup.this, new OnCompleteListener<AuthResult>() {
@@ -120,6 +138,9 @@ public class signup extends AppCompatActivity {
 
                                     db.collection("Users").document(Objects.requireNonNull(firebaseUser).getUid())
                                             .set(user)
+                                            /**
+                                             * when task is completed successfully
+                                             */
                                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                 @Override
                                                 public void onSuccess(Void aVoid) {
@@ -130,6 +151,9 @@ public class signup extends AppCompatActivity {
 
                                                 }
                                             })
+                                            /**
+                                             * when user fail to complete task
+                                             */
                                             .addOnFailureListener(new OnFailureListener() {
                                                 @Override
                                                 public void onFailure(@NonNull Exception e) {

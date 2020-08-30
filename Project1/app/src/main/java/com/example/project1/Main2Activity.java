@@ -1,5 +1,13 @@
 package com.example.project1;
 
+/**
+ * created by Gurbir Singh
+ */
+
+/**
+ * imported files
+ */
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,12 +15,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+/**
+ * attributes
+ */
+
 public class Main2Activity extends AppCompatActivity {
     ImageView small;
     ImageView medium;
     ImageView large;
     ImageView extralarge;
 
+    /**
+     * values declared for image views
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +37,11 @@ public class Main2Activity extends AppCompatActivity {
         medium = findViewById(R.id.imageView5);
         large = findViewById(R.id.imageView4);
         extralarge = findViewById(R.id.imageView6);
+
+        /**
+         * to select different Pizza sizes various buttons been given
+         * with onClick method and with intent for topping interface
+         */
         small.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

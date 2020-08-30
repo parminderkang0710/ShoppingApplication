@@ -1,4 +1,7 @@
 package com.example.project1;
+/**
+ * created by Parminder Singh
+ */
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,9 +16,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-
+/**
+ * recycle view use to show list of items
+ */
 public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.ViewHolder> {
-
+    /**
+     * attributes
+     */
     private Pizza pizza;
     private Context context;
     private List<Pizza> pizzaList;
@@ -26,14 +33,25 @@ public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.ViewHolder> 
         public TextView tvName, tvPrice;
         ConstraintLayout constraintLayout;
 
+        /**
+         * describes the item view and metadata
+         * within recyleView
+         * @param view
+         */
 
         ViewHolder(View view) {
             super(view);
-
+/**
+ * value declared for attributes
+ */
             tvName = view.findViewById(R.id.tvName);
             tvPrice = view.findViewById(R.id.tvPrice);
             constraintLayout = view.findViewById(R.id.rowLayout);
             constraintLayout.setOnClickListener(new View.OnClickListener() {
+                /**
+                 * click method for pizza list
+                 * @param v
+                 */
                 @Override
                 public void onClick(View v) {
                     pizza = pizzaList.get(getAdapterPosition());
